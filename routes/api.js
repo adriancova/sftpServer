@@ -49,6 +49,20 @@ yB0mi8bQKNV4zFSPo0lhkEWNj+JURqpd5aSTyY7HQXmxhpsW//0eRjuZY/rdeiXG
 pkrHRv66UBT55l7HKui9AkEAo2fG+vsxgGW2P7wVwN1DakbXcXmkciC77OW6cEzq
 R3BsIOUA+hQKPXMBaqnzbwObn9gSoe9qx6nryq3OCT7I/w==
 -----END RSA PRIVATE KEY-----`;
+const privateKeyString2 = 
+`MIICXgIBAAKBgQDYx4pDXi20Bh4q6KBZefZeFIJxoonJTN5Z0PmPHO8VLGYJw9Ae
+lp+C7JN3swcqkzRWfLpd8DsGbKH3Vif2XvhgtWN5WAc9qlPQW283uZqTahRH1HdS
+FufjFTq63loxyEOUjcpaqyJGr6UjWuErWxkHUHLiLz+jLdaKJxqEB+OlJwIDAQAB
+AoGAQdV/oOv2F0kQWlmhcOsALhwubVI+ZBrrH/29/H9+AEEmj+qexttZgApW0rBV
+CdIAwA9LDgJJ+q59Fb9djY3UAgNwldmV11MYDcmsb9OZs8xtY4uQsWt5mghlqBtk
+chQaSY+1/j2kXg/OPj2o1TDoIiVn6aTx57OLfjV6M1tYApECQQD3oDQBE2ys4NdB
+2y3l1GpFAgOw2SDDdqGZURi8hW08ZxzIIqBpf4FyHBS0PBDDr4VnGaBEEDGj5BD5
+Gb+4uaYJAkEA4BxJpXfmvbyjLsXInU7UzfO35rLZkFHddAt7CvEcQr8op9VC0izq
+kJV4BVY70X6WlljRzJQiga/gBxbKE9M9rwJBAIqpALXhhKdBuAe+jfL2gRNnT13G
+F9ycH11U1f8qz8JVEv7WtPCeX4PgSY+rWs/ZB2B2LxIt5z4YxZBXZM4x1tECQQCF
+yB0mi8bQKNV4zFSPo0lhkEWNj+JURqpd5aSTyY7HQXmxhpsW//0eRjuZY/rdeiXG
+pkrHRv66UBT55l7HKui9AkEAo2fG+vsxgGW2P7wVwN1DakbXcXmkciC77OW6cEzq
+R3BsIOUA+hQKPXMBaqnzbwObn9gSoe9qx6nryq3OCT7I/w==`;
 const sftpOpts = {
   host: '192.240.110.98', // string Hostname or IP of server.
   port: 22, // Port number of the server.
@@ -56,7 +70,7 @@ const sftpOpts = {
   //forceIPv6: false, // boolean (optional) Only connect via IPv6 address
   username: '089000003605', // string Username for authentication.
   //password: 'borsch', // string Password for password-based user authentication
-  privateKey: privateKeyString, //fs.readFileSync('/home/ubuntu/.ssh/id_rsa'), // Buffer or string that contains
+  privateKey: '/home/ubuntu/.ssh/id_rsa',//privateKeyString, //fs.readFileSync('/home/ubuntu/.ssh/id_rsa'), // Buffer or string that contains
   //passphrase: 'a pass phrase', // string - For an encrypted private key
   readyTimeout: 20000, // integer How long (in ms) to wait for the SSH handshake
   //strictVendor: true // boolean - Performs a strict server vendor check
