@@ -98,7 +98,8 @@ const connectSftpSantander = () => {
   sftp
     .connect(sftpOpts)
     .then(() => {
-      return sftp.list('/pathname');
+      console.log(sftp);
+      return sftp.list('/Inbound');
     })
     .then(data => {
       console.log(data, 'the data info');
