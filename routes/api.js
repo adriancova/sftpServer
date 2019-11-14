@@ -49,8 +49,7 @@ yB0mi8bQKNV4zFSPo0lhkEWNj+JURqpd5aSTyY7HQXmxhpsW//0eRjuZY/rdeiXG
 pkrHRv66UBT55l7HKui9AkEAo2fG+vsxgGW2P7wVwN1DakbXcXmkciC77OW6cEzq
 R3BsIOUA+hQKPXMBaqnzbwObn9gSoe9qx6nryq3OCT7I/w==
 -----END RSA PRIVATE KEY-----`;
-const privateKeyString2 = 
-`MIICXgIBAAKBgQDYx4pDXi20Bh4q6KBZefZeFIJxoonJTN5Z0PmPHO8VLGYJw9Ae
+const privateKeyString2 = `MIICXgIBAAKBgQDYx4pDXi20Bh4q6KBZefZeFIJxoonJTN5Z0PmPHO8VLGYJw9Ae
 lp+C7JN3swcqkzRWfLpd8DsGbKH3Vif2XvhgtWN5WAc9qlPQW283uZqTahRH1HdS
 FufjFTq63loxyEOUjcpaqyJGr6UjWuErWxkHUHLiLz+jLdaKJxqEB+OlJwIDAQAB
 AoGAQdV/oOv2F0kQWlmhcOsALhwubVI+ZBrrH/29/H9+AEEmj+qexttZgApW0rBV
@@ -78,7 +77,10 @@ const sftpOpts = {
   // string argument to get detailed (local) debug information.
   retries: 2, // integer. Number of times to retry connecting
   retry_factor: 2, // integer. Time factor used to calculate time between retries
-  retry_minTimeout: 2000 // integer. Minimum timeout between attempts
+  retry_minTimeout: 2000, // integer. Minimum timeout between attempts
+  algorithms: {
+    hmac: ['hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1', 'hmac-sha1-96']
+  }
 };
 const connectSftpSantander = () => {
   //console.log(fs.readFileSync)
