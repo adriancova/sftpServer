@@ -56,7 +56,7 @@ const sftpOpts = {
   //forceIPv6: false, // boolean (optional) Only connect via IPv6 address
   username: '089000003605', // string Username for authentication.
   //password: 'borsch', // string Password for password-based user authentication
-  privateKey: privateKeyString,//fs.readFileSync('/home/ubuntu/.ssh/id_rsa'), // Buffer or string that contains
+  privateKey: privateKeyString, //fs.readFileSync('/home/ubuntu/.ssh/id_rsa'), // Buffer or string that contains
   //passphrase: 'a pass phrase', // string - For an encrypted private key
   readyTimeout: 20000, // integer How long (in ms) to wait for the SSH handshake
   //strictVendor: true // boolean - Performs a strict server vendor check
@@ -78,8 +78,8 @@ const connectSftpSantander = () => {
       return data;
     })
     .catch(err => {
-      return err;
       console.log(err, 'catch error');
+      return err;
     });
 };
 
